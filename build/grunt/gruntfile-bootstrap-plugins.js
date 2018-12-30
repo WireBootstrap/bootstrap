@@ -22,7 +22,10 @@ module.exports = function(grunt) {
                         '../../plugins/eb-dropdown-list.js',
                         '../../plugins/eb-table.js',
                         '../../plugins/eb-button-list.js',
-                        '../../plugins/eb-check-box.js'
+                        '../../plugins/eb-check-box.js',
+                        '../../classes/eb-ui-MessageDialog.js',
+                        '../../plugins/eb-ui-ErrorDialog.js',
+                        '../../plugins/eb-ui-config.js'
                 ],
                 dest: '../lib/eb-bootstrap.js'
             }
