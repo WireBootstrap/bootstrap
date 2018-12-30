@@ -1,0 +1,36 @@
+<form class="smart-form">
+
+    <fieldset>
+
+        <div class="row">
+
+	    <section class="col col-4">
+		<label class="checkbox">
+		<input type="checkbox" ng-model="options.filter">
+			<i></i>Use Column Filters
+                </label>
+                <span class="help-block">Allow in-line filtering on column data.</span>
+	    </section>
+
+           <section class="col col-4">
+                <label class="label">Page Number</label>
+                <label class="input">
+                    <input type="number" placeholder="Page Number" ng-model="dataset.Query.Paging.Page">
+                </label>
+                <span class="help-block">To retrieve data in small increments, specify the first page number to pull.  This is typically 1. Use 0 to turn off paging.</span>
+            </section>
+            
+            <section class="col col-4">
+                <label class="label">Rows Per Page</label>
+                <label class="input">
+                    <input type="number" placeholder="Rows Per Page" ng-model="dataset.Query.Paging.Rows">
+                </label>
+                <span class="help-block">When using paging, specify how many rows to include on a single page.</span>
+            </section>
+  
+        </div>
+
+    </fieldset>
+
+    
+</form>

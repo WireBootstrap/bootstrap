@@ -1,0 +1,48 @@
+
+<form class="smart-form">
+
+    <fieldset>
+
+        <div class="row">
+
+            <section class="col col-4">
+                <label>Name</label>
+                <div eb-smartselect
+                     eb-data="fields()"
+                     eb-model="options.schema.name"
+                     data-class="checkbox state-default">
+                </div>
+                <span class="help-block">Field to be used for drop down items</span>
+            </section>
+
+            <section class="col col-4">
+                <label>All Value</label>
+                <label class="input"><input ng-model="options.all" /></label>
+		<span class="help-block">Item used to represent selecting 'All' values</span>
+            </section>
+
+<!--
+            <section class="col col-4">
+                <label>Default Value</label>
+                <label class="input"><input ng-model="options.selected" /></label>
+		<span class="help-block">Default selected value for the list</span>
+            </section>
+-->
+
+            <section class="col col-4">
+                <label>CSS Color</label>
+                <label class="input"><input ng-model="options.color" /></label>
+		<span class="help-block">Css class name for the list color</span>
+            </section>
+
+        </div>
+
+    </fieldset>
+
+
+        </div>
+
+    </fieldset>
+
+    
+</form>

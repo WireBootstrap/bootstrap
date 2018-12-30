@@ -1,0 +1,59 @@
+
+<form class="smart-form">
+
+    <fieldset>
+
+        <div class="row">
+
+            <section class="col col-6">
+                <label>Name</label>
+                <div eb-smartselect
+                     eb-data="fields()"
+                     eb-model="options.schema.name"
+                     data-class="checkbox state-default">
+                </div>
+                <span class="help-block">Specify the field to be used for buttons</span>
+            </section>
+
+           <section class="col col-6">
+                <label class="label">Orientation</label>
+                <label class="select">
+                    <select class="form-control" name='alignment' ng-model="options.alignment">
+                        <option value="vertical">Vertical</option>
+                        <option value="horizontal">Horizontal</option>
+                    </select><i></i>
+                </label>
+                <span class="help-block">Specify whether buttons should go up and down or left to right</span>
+            </section>
+
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+
+        <div class="row">
+
+            <section class="col col-4">
+                <label>Default Value</label>
+                <label class="input"><input ng-model="options.selected" /></label>
+		<span class="help-block">Default selected value for the buttons</span>
+            </section>
+
+            <section class="col col-4">
+                <label>CSS Color</label>
+                <label class="input"><input ng-model="options.color" /></label>
+		<span class="help-block">Css class name for the button color</span>
+            </section>
+
+	    <section class="col col-4">
+		<label class="checkbox">
+		<input type="checkbox" ng-model="options.multiselect">
+			<i></i>Multi-Select
+                </label>
+                <span class="help-block">Allow multiple button selections</span>
+	    </section>
+
+    </fieldset>
+    
+</form>

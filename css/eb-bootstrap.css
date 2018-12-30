@@ -1,0 +1,217 @@
+﻿/*
+ Enterprise Blocks Bootstrap Style Sheet v1.2.2
+
+ (c) 2014-2016 Enterprise Blocks, Inc.
+
+ Distributed under MIT license: //code.eblocks.com/license/license-mit.txt
+*/
+
+/* Used to detect if this style sheet is loaded */
+.eb-bs-hidden {
+    display:none
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+
+.eb-hr {
+    height: 1px;
+    background-color:#555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;    
+}
+
+/*
+    Popover
+*/
+
+.eb-plugin .popover  {
+    min-width:200px
+}    
+
+/*
+    Panel
+*/
+
+
+.eb-plugin .panel-heading table {
+    width:100%;
+    color:inherit !important;
+    font-family:inherit;    
+    font-size:inherit
+}
+
+
+/*
+    List
+*/
+
+/*.eb-dropdownlist {
+    text-align:center
+}*/
+
+.eb-dropdownlist .dropdown-menu {
+    top:31px
+}
+
+/*.eb-buttonlist {
+    text-align:center
+}*/
+.eb-buttonlist label {
+    margin:2px;
+}
+
+.eb-buttonlist label.eb-member {
+    margin-top:3px;margin-bottom:3px;text-align:left
+
+}      
+.eb-buttonlist label.eb-member input[type="checkbox"] {
+    float:left;margin-left: -20px
+}      
+
+
+/*
+    Dropdown
+
+*/
+.eb-dropdowntree .eb-tree {
+    height:0px
+}
+.eb-dropdowntree .eb-tree .jstree .jstree-container-ul, .eb-dropdowntree .eb-tree.jstree .jstree-container-ul {
+    text-align:left;
+    padding:8px;
+    list-style:none;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #ccc;
+    border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175);    
+    z-index:1000;
+    position:absolute;    
+}
+
+
+/* 
+    Table
+*/
+
+
+.eb-table-icon-drill-expand { 
+    background:url("eb_icon_tree_32px.png") ;
+    background-position:-101px -5px ;
+    background-repeat:no-repeat; 
+    background-color:transparent;
+    background-size:320px 96px;
+    display:inline-block;
+    width:22px;height:22px;
+    cursor:pointer;
+    margin-right:3px
+}
+
+.eb-table-icon-drill-collapse { 
+    background:url("eb_icon_tree_32px.png") ;
+    background-position:-133px -5px ;
+    background-repeat:no-repeat; 
+    background-color:transparent;
+    background-size:320px 96px;
+    display:inline-block;
+    width:22px;height:22px;
+    cursor:pointer;
+    margin-right:3px
+}
+
+.eb-table-icon-drill-none { 
+    display:inline-block;
+    width:22px;height:22px;
+    margin-right:3px
+}
+
+/*
+
+.eb-table .panel-heading table {
+    width:100%;
+    color:inherit;
+    font-family:inherit;    
+    font-size:inherit
+}
+*/
+
+.eb-table .panel-heading table a {
+    color:inherit
+}
+
+.eb-table .panel-heading table {
+    width:100%;
+    color:inherit;
+    font-family:inherit;    
+    font-size:inherit
+}
+
+.eb-table .panel-heading table a {
+    color:inherit
+}
+
+
+.eb-table .panel-heading .toolbar {
+    display:none
+}
+
+.eb-table.eb-table-fixedcols table, .eb-table.eb-table-fixedcols thead, .eb-table.eb-table-fixedcols tbody {
+    width: 100%;
+}
+
+.eb-table.eb-table-fixedcols thead, .eb-table.eb-table-fixedcols tbody, .eb-table.eb-table-fixedcols tr, .eb-table.eb-table-fixedcols td, .eb-table.eb-table-fixedcols th { 
+   display: block; 
+}
+
+.eb-table.eb-table-fixedcols tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.eb-table.eb-table-fixedcols tbody th {
+    height: 30px;
+}
+
+.eb-table.eb-table-fixedcols tbody {
+    width: 100%;
+/*    height: 300px;  */
+    overflow-y: auto;
+}
+
+.eb-table.eb-table-fixedcols tbody td, .eb-table.eb-table-fixedcols thead th {
+    width: 20%; 
+    float: left;
+}  
+
+/*
+    Nav
+*/
+
+.eb-folderlinksnav .breadcrumb button {
+    margin-right:7px
+}
+
+/*
+    search list
+
+*/
+
+.eb-searchlist .clear-search {
+    cursor: pointer; 
+    cursor: hand;
+}
+
+
+/*
+.eb-checkbox{
+    padding-left:30px
+}
+*/

@@ -1,0 +1,92 @@
+<html>
+
+<head>
+
+    <!-- cosmetic, not needed for plugin -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <!-- plugin dependency: jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    <!-- plugin dependency: eb data access framework -->
+    <script src="/eb/build/eb-all.min.js"></script>
+
+    <!-- plugin -->
+    <script src="../plugins/eb-table.js"></script>
+
+    <script type="text/javascript">
+
+        function init() {
+
+            var data = [ 
+                {product: "apples", order: "PRN001", quantity: 10, price: 10.44},
+                {product: "oranges", order: "PRN002", quantity: 15, price: 12.37},
+                {product: "apples", order: "PRN003", quantity: 20, price: 13.01}
+            ];
+        
+            var table = new eb.data.DataTable(data);
+        
+            $("#btn1").click(function(){
+            
+                $("#mytable1").ebTable({
+                    data: table,             
+                });          
+                        
+            });        
+                    
+        }
+
+        $(document).ready(function(){
+            init();
+        })
+    
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+                        
+        <div class="row">    
+            <div class="col-md-12">
+    
+                <h1>
+                WireBootstrap Table Plugin
+                </h1>
+                
+                <p>           
+                Use the <strong>WireBootstrap Table</strong> plugin to work with data inside a Bootstrap table.
+                </p>
+                                    
+                <p>
+                The example below binds an <strong>eb.data.DataTable</strong> object to the table plugin.
+                </p>
+                    
+                <pre class="prettyprint">                    
+    var data = [ 
+        {product: "apples", order: "PRN001", quantity: 10, price: 10.44},
+        {product: "oranges", order: "PRN002", quantity: 15, price: 12.37},
+        {product: "apples", order: "PRN003", quantity: 20, price: 13.01}
+    ];
+    
+    var table = new eb.data.DataTable(data);
+    
+    $("#mytable").ebtable({
+        data: table
+    });                  
+                </pre>
+                
+
+                <button id="btn1" type="button" class="button btn-primary btn-lg" style="margin-bottom:20px">Try It</button>
+                <hr/>       
+                <div id="mytable1"></div>    
+                
+            </div>
+        
+        </div>
+     </div>
+
+</body>
+
+</html>
