@@ -59,22 +59,22 @@
     text-align:center
 }*/
 
-.eb-dropdownlist .dropdown-menu {
+.eb-dropdown-list .dropdown-menu {
     top:31px
 }
 
 /*.eb-buttonlist {
     text-align:center
 }*/
-.eb-buttonlist label {
+.eb-button-list label {
     margin:2px;
 }
 
-.eb-buttonlist label.eb-member {
+.eb-button-list label.eb-member {
     margin-top:3px;margin-bottom:3px;text-align:left
 
 }      
-.eb-buttonlist label.eb-member input[type="checkbox"] {
+.eb-button-list label.eb-member input[type="checkbox"] {
     float:left;margin-left: -20px
 }      
 
@@ -204,7 +204,7 @@
 
 */
 
-.eb-searchlist .clear-search {
+.eb-search-list .clear-search {
     cursor: pointer; 
     cursor: hand;
 }

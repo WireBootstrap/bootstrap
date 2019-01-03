@@ -15,31 +15,32 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                '../../angular/eb.angular.js',
-                        '../../angular/eb-csv-export.angular.js',
-                        '../../angular/eb-filter-label.angular.js',
-                        '../../angular/eb-search-list.angular.js',
-                        '../../angular/eb-dataset-paging.angular.js',
-                        '../../angular/eb-dropdown-list.angular.js',
-                        '../../angular/eb-table..angularjs',
-                        '../../angular/eb-button-list.angular.js',
-                        '../../angular/eb-check-box.angular.js',
-                        '../../angular/eb-tabs.angular.js'
+                        '../../plugins/eb-csv-export.js',
+                        '../../plugins/eb-filter-label.js',
+                        '../../plugins/eb-search-list.js',
+                        '../../plugins/eb-dataset-paging.js',
+                        '../../plugins/eb-dropdown-list.js',
+                        '../../plugins/eb-table.js',
+                        '../../plugins/eb-button-list.js',
+                        '../../plugins/eb-check-box.js',
+                        '../../classes/eb-ui-MessageDialog.js',
+                        '../../classes/eb-ui-ErrorDialog.js',
+                        '../../classes/eb-ui-config.js'
                 ],
-                dest: '../lib/eb-bootstrap.angular.js'
+                dest: '../lib/eb-bootstrap.js'
             }
         },
         
         uglify: {
           options: {
-            banner: '/* Angular <%= pkg.description %> ' +
+            banner: '/* <%= pkg.description %> ' +
                 '(<%= grunt.template.today("yyyy-mm-dd") %>) ' +
                 '(c) 2014 - <%= grunt.template.today("yyyy") %> Enterprise Blocks, Inc. ' +
                 'License details : <%= pkg.license %> */'
             },
             dist: {
             files: {
-                '../lib/eb-bootstrap.angular.min.js': ['../lib/eb-bootstrap.angular.js']
+                '../lib/eb-bootstrap.min.js': ['../lib/eb-bootstrap.js']
             }
           }
         }
