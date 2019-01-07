@@ -13,6 +13,6 @@
     <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Table">Bootstrap Dropdown List</a></td>
   </tr>
   <tr><td><img src="https://github.com/WireBootstrap/Bootstrap/blob/master/images/eb-check-box.svg" width="50" height="50"></td>
-    <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Table">Bootstrap Check Box</a></td>
+    <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Table">Bootstrap Checkbox</a></td>
   </tr>
 </table>
