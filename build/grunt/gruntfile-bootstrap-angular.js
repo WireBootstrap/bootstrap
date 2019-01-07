@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                         '../../angular/eb-dropdown-list.angular.js',
                         '../../angular/eb-table..angularjs',
                         '../../angular/eb-button-list.angular.js',
-                        '../../angular/eb-check-box.angular.js',
+                        '../../angular/eb-checkbox.angular.js',
                         '../../angular/eb-tabs.angular.js'
                 ],
                 dest: '../lib/eb-bootstrap.angular.js'

@@ -263,6 +263,7 @@ $.fn.ebTable = function (config) {
             //if (cfg._paging)
             //  cfg.data.Query.Paging = eb.deepClone(cfg.data.Query.Paging, cfg._paging);
             pager = $(tmpl.paging).ebDatasetPaging({ data: cfg.data });
+            self.find(".eb-dataset-paging").remove();
             self.append(pager);
         }
 

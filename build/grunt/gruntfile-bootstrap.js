@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                         '../../plugins/eb-dropdown-list.js',
                         '../../plugins/eb-table.js',
                         '../../plugins/eb-button-list.js',
-                        '../../plugins/eb-check-box.js',
+                        '../../plugins/eb-checkbox.js',
                         '../../classes/eb-ui-MessageDialog.js',
                         '../../classes/eb-ui-ErrorDialog.js',
                         '../../classes/eb-ui-config.js'

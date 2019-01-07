@@ -398,6 +398,7 @@ $.fn.ebDatasetPaging = function (config) {
         }
 
         var row = $(t.row);
+        self.find("row").remove();
         self.append(row);
 
         row.append(t.colLabel.format(p.Page, pages, rows));
@@ -863,6 +864,7 @@ $.fn.ebTable = function (config) {
             //if (cfg._paging)
             //  cfg.data.Query.Paging = eb.deepClone(cfg.data.Query.Paging, cfg._paging);
             pager = $(tmpl.paging).ebDatasetPaging({ data: cfg.data });
+            self.find(".eb-dataset-paging").remove();
             self.append(pager);
         }
 
@@ -1030,10 +1032,10 @@ $.fn.ebTable = function (config) {
 })();;
 (function () {
 
-    $.fn.ebCheckBox = function (config) {
+    $.fn.ebCheckbox = function (config) {
 
         var self = this;
-        eb.ui.prependClass(self, "eb-check-box eb-plugin");
+        eb.ui.prependClass(self, "eb-checkbox eb-plugin");
 
         var cmp = new eb.ui.Component(this, config, _defaults(), true);
         var schema = cmp.updateFieldSchema({ id: "Id", name: "Name", label: "Label", selected: "Selected", iconClass: "iconClass" });

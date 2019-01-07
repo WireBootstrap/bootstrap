@@ -191,7 +191,7 @@ angular.module('eb.bootstrap')
 ;
 angular.module('eb.bootstrap')
 
-.directive('ebCheckBox', function () {
+.directive('ebCheckbox', function () {
 
     return {
         restrict: 'AEC',
@@ -204,7 +204,7 @@ angular.module('eb.bootstrap')
         },
         link: function ($scope, el, attrs, ngModelCtrl) {
 
-            $(document).on("ready", '.eb-check-box', function (e, d) {
+            $(document).on("ready", '.eb-checkbox', function (e, d) {
                 if ($scope.onReady)
                     $scope.onReady(el);
             });
@@ -260,10 +260,10 @@ angular.module('eb.bootstrap')
             if ($scope.ebData)
                 config.data = $scope.ebData;
 
-            if (attrs.ebCheckBox)
-                config = $.extend(config, $scope.$parent.$eval(attrs.ebCheckBox));
+            if (attrs.ebCheckbox)
+                config = $.extend(config, $scope.$parent.$eval(attrs.ebCheckbox));
 
-            var plugin = $(el).ebCheckBox(config);
+            var plugin = $(el).ebCheckbox(config);
 
             if (typeof $scope.plugin != 'undefined')
                 $scope.plugin = plugin;
