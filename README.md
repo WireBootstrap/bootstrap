@@ -7,7 +7,7 @@
     <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Table">Bootstrap Table</a></td>
   </tr>
   <tr><td><img src="https://github.com/WireBootstrap/Bootstrap/blob/master/images/eb-button-list.svg" width="50" height="50"></td>
-    <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Table">Bootstrap Button List</a></td>
+    <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Button-List">Bootstrap Button List</a></td>
   </tr>
   <tr><td><img src="https://github.com/WireBootstrap/Bootstrap/blob/master/images/eb-dropdown-list.svg" width="50" height="50"></td>
     <td><a href="https://github.com/WireBootstrap/Bootstrap/wiki/Bootstrap-Table">Bootstrap Dropdown List</a></td>
