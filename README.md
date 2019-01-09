@@ -6,7 +6,7 @@
 <strong>
 Twitter Bootstrap presentation components for WireBootstrap
 </strong>
-  <br/><br/><br/><br/>
+  <br/><br/><br/>
 </p>
 
 <hr/>
