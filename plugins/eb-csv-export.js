@@ -53,12 +53,12 @@
             //$base64
             //$tableExport
             if (typeof $.fn.base64 == 'undefined')
-                eb.loadJs('//cdn.wirebootstrap.com/tableExport/jquery.base64.js', function () { te(); });
+                eb.loadJs('//cdn.wirebootstrap.com/libs/tableExport/jquery.base64.js', function () { te(); });
             else te();
 
             function te() {
                 if (typeof $.fn.tableExport == 'undefined')
-                    eb.loadJs('//cdn.wirebootstrap.com/tableExport/1.2.1/eb-tableExport.js', function () { cb(); });
+                    eb.loadJs('//cdn.wirebootstrap.com/libs/tableExport/1.2.2/eb-tableExport.js', function () { cb(); });
                 else cb();
             }
 

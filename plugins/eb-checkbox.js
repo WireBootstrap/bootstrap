@@ -4,7 +4,7 @@
     $.fn.ebCheckbox = function (config) {
 
         var self = this;
-        eb.ui.prependClass(self, "eb-checkbox eb-plugin");
+        eb.ui.prependClass(self, "checkbox eb-checkbox eb-plugin");
 
         var cmp = new eb.ui.Component(this, config, _defaults(), true);
         var schema = cmp.updateFieldSchema({ id: "Id", name: "Name", label: "Label", selected: "Selected", iconClass: "iconClass" });

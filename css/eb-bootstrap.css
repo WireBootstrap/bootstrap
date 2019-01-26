@@ -209,7 +209,7 @@
     cursor: hand;
 }
 
-/* template needs padding */
-.eb-checkbox{
-    padding-left:30px
+.eb-checkbox label.checkbox{
+    padding-bottom:5px;
+    padding-left:25px
 }

@@ -53,12 +53,12 @@
             //$base64
             //$tableExport
             if (typeof $.fn.base64 == 'undefined')
-                eb.loadJs('//cdn.wirebootstrap.com/tableExport/jquery.base64.js', function () { te(); });
+                eb.loadJs('//cdn.wirebootstrap.com/libs/tableExport/jquery.base64.js', function () { te(); });
             else te();
 
             function te() {
                 if (typeof $.fn.tableExport == 'undefined')
-                    eb.loadJs('//cdn.wirebootstrap.com/tableExport/1.2.1/eb-tableExport.js', function () { cb(); });
+                    eb.loadJs('//cdn.wirebootstrap.com/libs/tableExport/1.2.2/eb-tableExport.js', function () { cb(); });
                 else cb();
             }
 
@@ -1035,7 +1035,8 @@ $.fn.ebTable = function (config) {
     $.fn.ebCheckbox = function (config) {
 
         var self = this;
-        eb.ui.prependClass(self, "eb-checkbox eb-plugin");
+        
+        eb.ui.prependClass(self, "checkbox eb-checkbox eb-plugin");
 
         var cmp = new eb.ui.Component(this, config, _defaults(), true);
         var schema = cmp.updateFieldSchema({ id: "Id", name: "Name", label: "Label", selected: "Selected", iconClass: "iconClass" });
@@ -1060,11 +1061,11 @@ $.fn.ebTable = function (config) {
             var colId = cmp.colId(schema);
 
             self.empty();
-
+            cfg.class = "checkbox";
             d.Rows.forEach(function (row) {
 
-                var lbl = "<label class=\"{0}\">{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>".format(
-                cfg.class || "checkbox",
+                var lbl = "<label{0}>{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>".format(
+                cfg.class ? " class=\"{0}\"".format(cfg.class) : "",
                 typeof row[schema.iconClass] == "undefined" ? "" : "<span class=\"" + row[schema.iconClass] + "\"></span> ",
                 row[colId],
                 eb.toBoolean(row[schema.selected], false) ? "checked" : "",
