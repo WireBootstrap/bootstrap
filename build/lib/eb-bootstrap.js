@@ -398,7 +398,6 @@ $.fn.ebDatasetPaging = function (config) {
         }
 
         var row = $(t.row);
-        self.find("row").remove();
         self.append(row);
 
         row.append(t.colLabel.format(p.Page, pages, rows));
@@ -1035,7 +1034,6 @@ $.fn.ebTable = function (config) {
     $.fn.ebCheckbox = function (config) {
 
         var self = this;
-        
         eb.ui.prependClass(self, "checkbox eb-checkbox eb-plugin");
 
         var cmp = new eb.ui.Component(this, config, _defaults(), true);
@@ -1061,11 +1059,11 @@ $.fn.ebTable = function (config) {
             var colId = cmp.colId(schema);
 
             self.empty();
-            cfg.class = "checkbox";
+
             d.Rows.forEach(function (row) {
 
-                var lbl = "<label{0}>{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>".format(
-                cfg.class ? " class=\"{0}\"".format(cfg.class) : "",
+                var lbl = "<label class=\"{0}\">{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>".format(
+                cfg.class || "checkbox",
                 typeof row[schema.iconClass] == "undefined" ? "" : "<span class=\"" + row[schema.iconClass] + "\"></span> ",
                 row[colId],
                 eb.toBoolean(row[schema.selected], false) ? "checked" : "",

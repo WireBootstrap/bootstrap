@@ -1,11 +1,11 @@
 {
   "name": "eb.bootstrap",
-  "version": "0.0.0",
+  "version": "2.1.0",
   "description": "Bootstrap components for WireBootstrap",
   "license": "//cdn.wirebootstrap.com/libs/license/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wirebootstrap/bootstrap"
+    "url": "https://github.com/WireBootstrap/Bootstrap.git"
   },
   "dependencies": {
     "grunt-contrib-concat": "^0.1.3",
