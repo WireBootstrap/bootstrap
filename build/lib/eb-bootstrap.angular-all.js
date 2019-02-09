@@ -38,7 +38,7 @@
                         t.remove();
                     });
 
-                    t = t.ebtable({ data: ds });
+                    t = t.ebTable({ data: ds });
 
                 });
 
