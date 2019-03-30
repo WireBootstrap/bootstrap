@@ -75,6 +75,8 @@
 
                 if (sel.id == cfg.all)
                     ev.action().clear();
+                else
+                    ev.action().replace();
 
                 var ed = { base: e, data: ev.getData() };
 

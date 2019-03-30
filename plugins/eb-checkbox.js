@@ -27,12 +27,13 @@
 
             var d = cmp.data();
             var colId = cmp.colId(schema);
+            var t = _template();
 
             self.empty();
 
             d.Rows.forEach(function (row) {
 
-                var lbl = "<label class=\"{0}\">{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>".format(
+                var lbl = t.format(
                 cfg.class || "checkbox",
                 typeof row[schema.iconClass] == "undefined" ? "" : "<span class=\"" + row[schema.iconClass] + "\"></span> ",
                 row[colId],
@@ -109,6 +110,10 @@
 
             cmp.ready();
 
+        }
+
+        function _template() {
+            return cfg.template || "<label class=\"{0}\">{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>";
         }
 
         function _ensureComponent(cb) {

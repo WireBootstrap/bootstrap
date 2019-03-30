@@ -247,7 +247,8 @@ $.fn.ebSearchList = function (config) {
     };
     var cmp = new eb.ui.Component(this, config, defaults, true);
     var cfg = cmp.config();
-
+    var checkbox;
+    
     function _init() {
         _ensureComponent(function () {
             // no data necessary
@@ -300,7 +301,7 @@ $.fn.ebSearchList = function (config) {
         cfg.checkbox.events.itemClick.callback = cfg.events.itemClick.callback;
         cfg.checkbox.data = cfg.data;
 
-        var checkbox = $(t.div).ebCheckBox(cfg.checkbox);
+        checkbox = $(t.div).ebCheckbox(cfg.checkbox);
 
         self.append($(t.row).append($(t.col).append(checkbox)));
 
@@ -348,6 +349,10 @@ $.fn.ebSearchList = function (config) {
     this.initialize = function () {
         _init();
         return this;
+    }
+    
+    this.pluginCheckbox = function() {
+        return checkbox;
     }
 
     if (cfg.autoInit)
@@ -565,6 +570,8 @@ $.fn.ebDatasetPaging = function (config) {
 
                 if (sel.id == cfg.all)
                     ev.action().clear();
+                else
+                    ev.action().replace();
 
                 var ed = { base: e, data: ev.getData() };
 
@@ -1057,12 +1064,13 @@ $.fn.ebTable = function (config) {
 
             var d = cmp.data();
             var colId = cmp.colId(schema);
+            var t = _template();
 
             self.empty();
 
             d.Rows.forEach(function (row) {
 
-                var lbl = "<label class=\"{0}\">{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>".format(
+                var lbl = t.format(
                 cfg.class || "checkbox",
                 typeof row[schema.iconClass] == "undefined" ? "" : "<span class=\"" + row[schema.iconClass] + "\"></span> ",
                 row[colId],
@@ -1139,6 +1147,10 @@ $.fn.ebTable = function (config) {
 
             cmp.ready();
 
+        }
+
+        function _template() {
+            return cfg.template || "<label class=\"{0}\">{1}<input type=\"checkbox\" value=\"{2}\" {3}><i></i>{4}</label>";
         }
 
         function _ensureComponent(cb) {

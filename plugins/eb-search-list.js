@@ -13,7 +13,8 @@ $.fn.ebSearchList = function (config) {
     };
     var cmp = new eb.ui.Component(this, config, defaults, true);
     var cfg = cmp.config();
-
+    var checkbox;
+    
     function _init() {
         _ensureComponent(function () {
             // no data necessary
@@ -66,7 +67,7 @@ $.fn.ebSearchList = function (config) {
         cfg.checkbox.events.itemClick.callback = cfg.events.itemClick.callback;
         cfg.checkbox.data = cfg.data;
 
-        var checkbox = $(t.div).ebCheckBox(cfg.checkbox);
+        checkbox = $(t.div).ebCheckbox(cfg.checkbox);
 
         self.append($(t.row).append($(t.col).append(checkbox)));
 
@@ -114,6 +115,10 @@ $.fn.ebSearchList = function (config) {
     this.initialize = function () {
         _init();
         return this;
+    }
+    
+    this.pluginCheckbox = function() {
+        return checkbox;
     }
 
     if (cfg.autoInit)

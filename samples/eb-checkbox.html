@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+    <!-- cosmetic, not needed for plugin -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <!-- plugin dependency: jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    <!-- plugin dependency: eb data access framework -->
+    <script src="/eb/build/lib/eb-all.min.js"></script>
+
+    <!-- plugin -->
+    <script src="../plugins/eb-checkbox.js"></script>
+
+    <script type="text/javascript">
+
+        function init() {
+
+            var data = [ 
+                {Name: "Option 1", Selected: false},
+                {Name: "Option 2", Selected: true},
+                {Name: "Option 3", Selected: false}
+            ];
+        
+            var table = new eb.data.DataTable(data);
+        
+            $("#btn1").click(function(){
+            
+                $("#checkbox1").ebCheckbox({
+                    data: table,
+                    template: "<div class=\"{0}\">{1}<label class=\"\"><div class=\"icheckbox_flat-green {3}\" style=\"position: relative;\">"+
+                        "<input type=\"checkbox\" class=\"flat\" checked=\"checked\" style=\"position: absolute; opacity: 0;\" value=\"{2}\">"+
+                        "<ins class=\"iCheck-helper\" style=\"position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;\"></ins></div> {4}</label></div>"                           
+                });          
+                        
+            });        
+                    
+        }
+
+        $(document).ready(function(){
+            init();
+        })
+    
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+                        
+        <div class="row">    
+            <div class="col-md-12">
+    
+                <h1>
+                WireBootstrap Checkbox
+                </h1>
+                
+
+                <button id="btn1" type="button" class="button btn-primary btn-lg" style="margin-bottom:20px">Try It</button>
+                <hr/>       
+                <div id="checkbox1"></div>    
+                
+            </div>
+        
+        </div>
+     </div>
+
+</body>
+
+</html>
